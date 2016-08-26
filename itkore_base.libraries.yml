@@ -3,9 +3,3 @@ global-styling:
   css:
     theme:
       css/styles.css: { media: screen }
-
-global-js:
-  version: VERSION
-  js:
-    js/itkore_base_header_scrolling.js: {}
-    js/itkore_base_menu_toggle.js: {}
