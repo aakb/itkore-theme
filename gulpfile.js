@@ -6,7 +6,7 @@ var argv = require('yargs')
   .alias('t', 'theme')
   .alias('d', 'domain')
   .default('sync', false)
-  .default('theme', ['base', 'blue', 'orange'])
+  .default('theme', ['theme'])
   .default('domain', 'itkore.vm')
   .argv;
 
@@ -18,8 +18,6 @@ var gulp = require('gulp-help')(require('gulp'), {
     console.log(chalk.underline('Global parameters'));
 
     args.push('');
-    args.push(chalk.cyan('--theme (-t)'));
-    args.push('Limit the theme(s) that should be used. Use one --theme for each theme you want' + '\n');
     args.push(chalk.cyan('--sync (-s)'));
     args.push('Enabled browser-sync' + '\n');
     args.push(chalk.cyan('--domain (-d)'));
@@ -27,9 +25,9 @@ var gulp = require('gulp-help')(require('gulp'), {
 
     console.log.apply(console, args);
     console.log(chalk.underline('Usage examples:'));
-    console.log(chalk.cyan('  *') + chalk.green(' gulp watch --theme base --theme blue --domain test.itkore.vm --sync'));
+    console.log(chalk.cyan('  *') + chalk.green(' gulp watch --theme base --domain test.itkore.vm --sync'));
     console.log(chalk.cyan('  *') + chalk.green(' gulp watch --sync'));
-    console.log(chalk.cyan('  *') + chalk.green(' gulp sass -t base'));
+    console.log(chalk.cyan('  *') + chalk.green(' gulp sass'));
     console.log('\n' + 'It will always default to use all themes' + '\n');
   }
 });
@@ -56,37 +54,17 @@ var browserSync;
  */
 var configuration = {
   // Base theme.
-  'base': {
+  'theme': {
     "js": {
-      "paths": ['./itkore_base/js/*.js', '!./itkore_base/js/*.min.*'],
-      "dest": './itkore_base/js'
+      "paths": ['./js/*.js', '!./js/*.min.*'],
+      "dest": './js'
     },
     "sass": {
-      "paths": './itkore_base/scss/**/*.scss',
-      'dest': './itkore_base/css'
+      "paths": './scss/**/*.scss',
+      'dest': './css'
     },
     "twig": {
-      "paths": './itkore_base/templates/**/*.twig'
-    }
-  },
-  // Blue sub-theme.
-  'blue' : {
-    "sass": {
-      "paths": './itkore_blue/scss/**/*.scss',
-      'dest': './itkore_blue/css'
-    },
-    "twig": {
-      "paths": './itkore_blue/templates/**/*.twig'
-    }
-  },
-  // Orange sub-theme.
-  'orange' : {
-    "sass": {
-      "paths": './itkore_orange/scss/**/*.scss',
-      'dest': './itkore_orange/css'
-    },
-    "twig": {
-      "paths": './itkore_orange/templates/**/*.twig'
+      "paths": './templates/**/*.twig'
     }
   }
 };
