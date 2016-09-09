@@ -1,0 +1,20 @@
+status: true
+dependencies:
+  module:
+    - itk_hamburger_menu
+  theme:
+    - itkore_base
+id: itkhamburgermenu
+theme: itkore_base
+region: hamburger
+weight: -3
+provider: null
+plugin: itk_hamburger_menu
+settings:
+  id: itk_hamburger_menu
+  label: 'ITK Hamburger menu'
+  provider: itk_hamburger_menu
+  label_display: visible
+  itk_hamburger_menu: main
+  itk_hamburger_menu_depth: '2'
+visibility: {  }
