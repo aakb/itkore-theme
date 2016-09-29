@@ -1,7 +1,8 @@
 {
-  "name": "itkore",
+  "name": "drupal/itkore-theme",
   "version": "1.0.0",
-  "description": "Hanled gulp in themes",
+  "description": "Setup itkore theme",
+  "type": "drupal-theme",
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^6.3.7",
