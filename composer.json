@@ -5,7 +5,6 @@
   "type": "drupal-theme",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
-  "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^6.3.7",
     "browser-sync": "^2.13.0",
@@ -24,5 +23,5 @@
     "gulp-uglify": "^1.5.4",
     "yargs": "^4.7.1"
   },
-  "author": "Martinyde",
+  "author": "Martinyde"
 }
