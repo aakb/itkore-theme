@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Setup itkore theme",
   "type": "drupal-theme",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^6.3.7",
@@ -22,6 +24,5 @@
     "gulp-uglify": "^1.5.4",
     "yargs": "^4.7.1"
   },
-  "author": "Cableman",
-  "license": "ISC"
+  "author": "Martinyde",
 }
